@@ -1,0 +1,35 @@
+{% load static %}
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+
+        <!-- Кнопка меню для мобильной версии -->
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <img src="{% static 'img/menu.png' %}" alt="Menu">
+        </button>
+
+        <!-- Блок с логотипом -->
+        <a class="navbar-brand mx-auto" href="#">
+            <img src="{% static 'img/logo.png' %}" alt="NASA Logo">
+        </a>
+
+        <!-- Блок меню -->
+        <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" id="goToTop">Преимущества</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#gallery">Фотографии</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- Пустой блок -->
+        <div class="empty-block"></div>
+
+        <!-- Блок с кнопкой входа (заглушка) -->
+        <a class="d-flex" href="#">
+            <img src="{% static 'img/enter.png' %}" alt="Вход">
+        </a>
+    </div>
+</nav>
