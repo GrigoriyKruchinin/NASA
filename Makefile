@@ -10,7 +10,7 @@ migrate:
 start:
 	gunicorn nasa.wsgi:application
 
-dev:
+runserver:
 	python manage.py runserver
 
 instpip:
