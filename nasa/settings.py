@@ -29,7 +29,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.getenv("DEBUG")
+DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
+print(f"DEBUG is {'ON' if DEBUG else 'OFF'}")
 
 
 ALLOWED_HOSTS = [
@@ -95,6 +96,8 @@ WSGI_APPLICATION = "nasa.wsgi.application"
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
+
+print(f"Using {'MySQL' if DEBUG else 'PostgreSQL'} settings")
 
 if DEBUG:
     DATABASES = {
