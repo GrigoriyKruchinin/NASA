@@ -30,6 +30,7 @@ SECRET_KEY = os.getenv("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = os.getenv("DEBUG", "False").lower() in ("true", "1", "t")
+
 print(f"DEBUG is {'ON' if DEBUG else 'OFF'}")
 
 
@@ -98,8 +99,6 @@ WSGI_APPLICATION = "nasa.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-print(f"Using {'MySQL' if DEBUG else 'PostgreSQL'} settings")
-
 if DEBUG:
     DATABASES = {
         "default": dj_database_url.config(
@@ -115,7 +114,7 @@ if DEBUG:
     db_from_env = dj_database_url.config(conn_max_age=600)
     DATABASES["default"].update(db_from_env)
 else:
-    DATABASE_URL = os.getenv("DATABASE_URL")
+    DATABASE_URL = os.getenv("DATABASE_URL_POSTGRESQL")
     DATABASES = {
         "default": dj_database_url.config(
             default=DATABASE_URL,
@@ -123,6 +122,7 @@ else:
         )
     }
 
+print("Используемая база данных:", DATABASES["default"]["ENGINE"])
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -181,7 +181,6 @@ AWS_ACCESS_KEY_ID = os.getenv("AWS_ACCESS_KEY_ID")
 AWS_SECRET_ACCESS_KEY = os.getenv("AWS_SECRET_ACCESS_KEY")
 AWS_STORAGE_BUCKET_NAME = os.getenv("AWS_STORAGE_BUCKET_NAME")
 AWS_S3_ENDPOINT_URL = "https://storage.yandexcloud.net"
-# AWS_S3_REGION_NAME = "ru-central1"
 
 # Настройки медиафайлов
 if DEBUG:
