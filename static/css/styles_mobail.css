@@ -94,14 +94,16 @@
     }
 
     /* Блок с преимуществами */
-        /* Блок текста */
+    /* Блок текста */
     .row.justify-content-center.mb-5 {
         padding: 0 20px; /* Добавляем отступы слева и справа */
+        margin-bottom: -20px !important; /* Уменьшаем нижний отступ */
+        margin-top: -50px !important;
     }
 
     .col-md-8.text-center {
         width: 100%; /* Занимает всю ширину на мобильных устройствах */
-        transform: scale(0.7); /* Уменьшаем масштаб до 80% */
+        transform: scale(0.7); /* Уменьшаем масштаб до 70% */
     }
 
     .col-md-8.text-center h2 {
