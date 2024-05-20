@@ -96,26 +96,34 @@
     /* Блок с преимуществами */
     /* Блок текста */
     .row.justify-content-center.mb-5 {
-        padding: 0 20px; /* Добавляем отступы слева и справа */
-        margin-bottom: -20px !important; /* Уменьшаем нижний отступ */
+        padding: 0 20px;
+        margin-bottom: -20px !important;
         margin-top: -50px !important;
     }
 
     .col-md-8.text-center {
-        width: 100%; /* Занимает всю ширину на мобильных устройствах */
-        transform: scale(0.7); /* Уменьшаем масштаб до 70% */
+        width: 100%;
+        transform: scale(0.8);
     }
 
     .col-md-8.text-center h2 {
-        font-size: 24px; /* Уменьшаем размер шрифта заголовка */
-        line-height: 1.2; /* Устанавливаем межстрочный интервал */
-        word-wrap: break-word; /* Переносим слова, если они не помещаются на одной строке */
+        font-size: 24px;
+        line-height: 1.2;
+        word-wrap: break-word;
+        font-family: Montserrat, sans-serif; /* Добавляем семейство шрифтов для h2 */
+        font-weight: 700; /* Применяем жирное начертание для h2 */
+        letter-spacing: 0.02em; /* Применяем межбуквенное расстояние для h2 */
+        text-align: center; /* Центрируем текст для h2 */
     }
 
     .col-md-8.text-center p {
-        font-size: 16px; /* Уменьшаем размер шрифта текста */
-        line-height: 1.4; /* Устанавливаем межстрочный интервал */
-        word-wrap: break-word; /* Переносим слова, если они не помещаются на одной строке */
+        font-size: 20px;
+        line-height: 1.4;
+        word-wrap: break-word;
+        font-family: Montserrat, sans-serif; /* Добавляем семейство шрифтов для p */
+        font-weight: 400; /* Применяем нормальное начертание для p */
+        letter-spacing: 0.02em; /* Применяем межбуквенное расстояние для p */
+        text-align: center; /* Центрируем текст для p */
     }
 
     .container.px-4.py-5 .row.justify-content-center .col-md-10 .row.row-cols-1.row-cols-md-2.align-items-center.g-5 .col .row.row-cols-1.row-cols-sm-2.g-4.justify-content-center {
@@ -135,7 +143,7 @@
 
     .container.px-4.py-5 .row.justify-content-center .col-md-10 .row.row-cols-1.row-cols-md-2.align-items-center.g-5 .col .row.row-cols-1.row-cols-sm-2.g-4.justify-content-center .col-sm-6 h3 {
         font-family: 'Montserrat';
-        font-size: calc(12px + 0.5vw); /* Изменяемый размер шрифта */
+        font-size: calc(12px + 0.5vw);
         font-weight: 600;
         line-height: 20px;
         letter-spacing: 0.02em;
@@ -160,7 +168,7 @@
     .slider-for img {
         width: 100%;
         height: 300px;
-        object-fit: cover; /* Сохраняет пропорции изображения */
+        object-fit: cover;
     }
 
     .slider-nav {
@@ -172,7 +180,7 @@
     .slider-nav img {
         width: 100px;
         height: 100px;
-        object-fit: cover; /* Сохраняет пропорции изображения */
+        object-fit: cover;
     }
 
     /* Убираем горизонтальную прокрутку */
