@@ -32,7 +32,7 @@ msgstr "Русский"
 #, fuzzy
 #| msgid "Image"
 msgid "No image"
-msgstr "Изображение"
+msgstr "Без изображения"
 
 #: nasa/slider/admin.py:25 nasa/slider/models.py:12
 msgid "Image"
