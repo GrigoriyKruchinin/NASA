@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-05-22 07:58+0200\n"
+"POT-Creation-Date: 2024-05-22 08:25+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,7 +28,13 @@ msgstr "Английский"
 msgid "Russian"
 msgstr "Русский"
 
-#: nasa/slider/admin.py:23 nasa/slider/models.py:12
+#: nasa/slider/admin.py:22
+#, fuzzy
+#| msgid "Image"
+msgid "No image"
+msgstr "Изображение"
+
+#: nasa/slider/admin.py:25 nasa/slider/models.py:12
 msgid "Image"
 msgstr "Изображение"
 
