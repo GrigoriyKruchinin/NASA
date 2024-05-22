@@ -1,17 +1,27 @@
 {% load static %}
+{% load thumbnail %}
 <div class="slider-container" id="gallery">
     <h2 class="slider-title">Фотографии</h2>
     <div class="slider-wrapper">
+        <!-- Для слайдера основных изображений -->
         <div class="slider-for">
-            <!-- Блок основного фото слайдера -->
             {% for slide in slides %}
-                <div><img src="{{ slide.image.url }}" alt="{{ slide.title }}" data-width="{{ slide.image.width }}" data-height="{{ slide.image.height }}"></div>
+                {% if 'max-width: 767px' in request.META.HTTP_USER_AGENT %}
+                    <div><img src="{{ slide.image|thumbnail_url:'slider-for.mobail' }}" alt="{{ slide.title }}"></div>
+                {% else %}
+                    <div><img src="{{ slide.image|thumbnail_url:'slider-for.desktop' }}" alt="{{ slide.title }}"></div>
+                {% endif %}
             {% endfor %}
         </div>
+
+        <!-- Для навигационного блока слайдера -->
         <div class="slider-nav">
-            <!-- Навигационный блок слайдера -->
             {% for slide in slides %}
-                <div><img src="{{ slide.image.url }}" alt="{{ slide.title }}"></div>
+                {% if 'max-width: 767px' in request.META.HTTP_USER_AGENT %}
+                    <div><img src="{{ slide.image|thumbnail_url:'slider-nav.mobail' }}" alt="{{ slide.title }}"></div>
+                {% else %}
+                    <div><img src="{{ slide.image|thumbnail_url:'slider-nav.desktop' }}" alt="{{ slide.title }}"></div>
+                {% endif %}
             {% endfor %}
         </div>
     </div>

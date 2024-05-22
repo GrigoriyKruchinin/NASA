@@ -187,7 +187,6 @@ STATICFILES_DIRS = [
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 
-
 # Настройки медиафайлов
 if DEBUG:
     MEDIA_URL = "/media/"
@@ -201,3 +200,13 @@ else:
     MEDIA_URL = f"https://{AWS_STORAGE_BUCKET_NAME}.storage.yandexcloud.net/"
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
+
+
+THUMBNAIL_ALIASES = {
+    "": {
+        "slider-for.desktop": {"size": (750, 420), "crop": True},
+        "slider-for.mobail": {"size": (165, 165), "crop": True},
+        "slider-nav.desktop": {"size": (340, 340), "crop": True},
+        "slider-nav.mobail": {"size": (100, 100), "crop": True},
+    },
+}
