@@ -1,6 +1,7 @@
 from django.contrib import admin
 from django.utils.html import format_html
 from adminsortable2.admin import SortableAdminMixin
+from django.utils.translation import gettext_lazy as _
 from .models import Slide
 
 
@@ -19,4 +20,4 @@ class SlideAdmin(SortableAdminMixin, admin.ModelAdmin):
             return "No image"
 
     display_image.allow_tags = True
-    display_image.short_description = "Image"
+    display_image.short_description = _("Image")
