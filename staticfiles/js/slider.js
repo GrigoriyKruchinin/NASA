@@ -23,9 +23,7 @@ $(document).ready(function() {
         },
         callbacks: {
             elementParse: function(item) {
-                item.src = $(item.el).attr('src');
-                item.w = $(item.el).data('width');
-                item.h = $(item.el).data('height');
+                item.src = $(item.el).data('src');
             }
         },
         fullscreen: {
