@@ -7,9 +7,13 @@
         <div class="slider-for">
             {% for slide in slides %}
                 {% if 'max-width: 767px' in request.META.HTTP_USER_AGENT %}
-                    <div><img src="{{ slide.image|thumbnail_url:'slider-for.mobail' }}" alt="{{ slide.title }}"></div>
+                    <div>
+                        <img src="{{ slide.image|thumbnail_url:'slider-for.mobail' }}" alt="{{ slide.title }}" data-mfp-src="{{ slide.image.url }}">
+                    </div>
                 {% else %}
-                    <div><img src="{{ slide.image|thumbnail_url:'slider-for.desktop' }}" alt="{{ slide.title }}"></div>
+                    <div>
+                        <img src="{{ slide.image|thumbnail_url:'slider-for.desktop' }}" alt="{{ slide.title }}" data-mfp-src="{{ slide.image.url }}">
+                    </div>
                 {% endif %}
             {% endfor %}
         </div>

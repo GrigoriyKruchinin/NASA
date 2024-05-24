@@ -16,14 +16,14 @@ $(document).ready(function() {
     });
 
     $('.slider-for').magnificPopup({
-        delegate: 'img',
+        delegate: 'img[data-mfp-src]',
         type: 'image',
         gallery: {
             enabled: true
         },
         callbacks: {
             elementParse: function(item) {
-                item.src = $(item.el).data('src');
+                item.src = $(item.el).data('mfp-src');
             }
         },
         fullscreen: {
